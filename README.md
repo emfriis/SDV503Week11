@@ -29,7 +29,45 @@ Insertion and removal in Linked Lists are accomplished by shifting around pointe
 
 Searching through the list requires you to go through each node in sequence, going through the reference to each node in the next property of its preceding node.
 
+The basic functionalities of linked lists (add to head, remove from head, search for value at index) will follow the approximate syntax of:
 
+class linkedList {
+
+    Create your linked list with a head property
+
+    add(value) {
+        Create a new node storing the given value
+        Point the new node to the current head node
+        Point the head to the new node
+    }
+
+    remove() {
+        Check if the list is empty
+            Return undefined
+        Point the head to the node preceding the current head node
+    }
+
+    search(index) {
+        Check if the index is positive {
+            Create a pointer variable to point at nodes
+            Create a location variable to check the index
+            Until the end of the list or until you reach the given index {
+                Point pointer variable to the next node
+                Increment the location variable
+            }
+            Return the data of the current node unless current is null, then return undefined
+        } Else
+            Return undefined
+    }
+}
+
+The Advantages of Linked Lists are:
+1. Constant time complexity for insertion and removal.
+2. Can be used to easily implement stacks and queues.
+
+The Disadvantages of Linked Lists are:
+1. Linear time complexity for traversing the list.
+2. Increased memory usage from method of storage, even so for doubly-linked lists.
 
 ## Activity Three - Recursion in JavaScript
 
@@ -47,3 +85,6 @@ function recFunction(argument) {
 }
 
 The advantage of Recursion is that it often presents a more elegant solution for some problems within JavaScript, being more easy to visualize, and removing the potential need for nested loops. Additionally, using recursion can reduce time complexity. However, recursion is usually slower than an iterative approach, and can potentially overwhelm the call stack with excessive memory use.
+
+Recursion is useful for accessing from Linked Lists, Trees, and Graphs, removing the need for an excessive and illegible mass of iterative code.
+
