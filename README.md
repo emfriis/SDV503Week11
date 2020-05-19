@@ -1,5 +1,7 @@
 # SDV503Week11
 
+***I have no idea how to create text diagrams and the Markdown Cheatsheet was not remotely helpful in understanding how to :).
+
 ## Activity One - Data Structures in JavaScript
 There are several kinds of data structures in JavaScript.
 
@@ -24,6 +26,11 @@ Trees feature parent nodes that point to child nodes, wherein parent nodes can p
 *Linked Lists* are a highly relevant kind of Data Structure within the architecture of JavaScript. Linked Lists store their items in seqeunce using nodes, with each subsequent node pointing only to the next (and the preceding item in the case of Doubly-Linked Lists). The first node of a Linked List is referred to as its *head*, and its last node as its *tail*. The last node will always point to *null*.
 
 Effectively, each node is a JavaScript Object, with a property storing data, and a *next* property that can contain another nested object, which can contain another nested object and so on, allowing nodes to be stored sequentially, but wherein each node can only be accessed through its preceding node. 
+
+ ______       ________________       _______________                                
+| HEAD | --> | DATA  |  NEXT  | --> | DATA  | NEXT  | --> NULL
+|______|     |_______|________|     |_______|_______|                
+
 
 Insertion and removal in Linked Lists are accomplished by shifting around pointers. If a node is set to be pointed to by another node as well pointing to a subsequent node it appears in sequence and is inserted. If a node doesnt have any nodes pointing to it it doesn't appear in sequence and is removed.
 
@@ -69,6 +76,8 @@ The Disadvantages of Linked Lists are:
 1. Linear time complexity for traversing the list.
 2. Increased memory usage from method of storage, even so for doubly-linked lists.
 
+One applications of linked lists in the real world are image viewers, music players, and similar programs that want items to be linked by previous and next.
+
 ## Activity Three - Recursion in JavaScript
 
 *Recursive Functions* refer to functions that call themselves as a part of their execution. These functions require a breaking if statement that tells the function at what point to stop recurring itself, otherwise, some Recursive Functions will infinitely call themselves which may cause technical difficulties. This if statement that prevents this is known as the *Base Case*.
@@ -88,3 +97,4 @@ The advantage of Recursion is that it often presents a more elegant solution for
 
 Recursion is useful for accessing from Linked Lists, Trees, and Graphs, removing the need for an excessive and illegible mass of iterative code.
 
+One application of recursion in the real world is Quickort, an efficient sorting algorithm, which uses recursion to sort sub-arrays in a way that uses very little memory and on average has logarithmic time complexity, but can have worst cases with quadratic time complexity.
