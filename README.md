@@ -26,11 +26,8 @@ Trees feature parent nodes that point to child nodes, wherein parent nodes can p
 *Linked Lists* are a highly relevant kind of Data Structure within the architecture of JavaScript. Linked Lists store their items in seqeunce using nodes, with each subsequent node pointing only to the next (and the preceding item in the case of Doubly-Linked Lists). The first node of a Linked List is referred to as its *head*, and its last node as its *tail*. The last node will always point to *null*.
 
 Effectively, each node is a JavaScript Object, with a property storing data, and a *next* property that can contain another nested object, which can contain another nested object and so on, allowing nodes to be stored sequentially, but wherein each node can only be accessed through its preceding node. 
-
- ______       ________________       _______________                                
-| HEAD | --> | DATA  |  NEXT  | --> | DATA  | NEXT  | --> NULL
-|______|     |_______|________|     |_______|_______|                
-
+                  
+|HEAD| --> |DATA|NEXT| --> |DATA|NEXT| --> NULL
 
 Insertion and removal in Linked Lists are accomplished by shifting around pointers. If a node is set to be pointed to by another node as well pointing to a subsequent node it appears in sequence and is inserted. If a node doesnt have any nodes pointing to it it doesn't appear in sequence and is removed.
 
